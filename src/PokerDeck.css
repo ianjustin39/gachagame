@@ -1,0 +1,22 @@
+/* src/PokerDeck.css */
+.deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* 卡片之間的間距 */
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* 背景顏色 */
+  }
+  
+  .card {
+    width: 70px; /* 卡片寬度 */
+    height: 100px; /* 卡片高度 */
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
