@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/gachagame/static/css/main.a9ecddbe.css",
+    "main.css": "/gachagame/static/css/main.4c318379.css",
     "main.js": "/gachagame/static/js/main.93099ecd.js",
     "static/js/453.ed3810f9.chunk.js": "/gachagame/static/js/453.ed3810f9.chunk.js",
     "static/media/Logo.PNG": "/gachagame/static/media/Logo.69ad40e60f03a8e4a3b5.PNG",
     "index.html": "/gachagame/index.html",
-    "main.a9ecddbe.css.map": "/gachagame/static/css/main.a9ecddbe.css.map",
+    "main.4c318379.css.map": "/gachagame/static/css/main.4c318379.css.map",
     "main.93099ecd.js.map": "/gachagame/static/js/main.93099ecd.js.map",
     "453.ed3810f9.chunk.js.map": "/gachagame/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9ecddbe.css",
+    "static/css/main.4c318379.css",
     "static/js/main.93099ecd.js"
   ]
 }
