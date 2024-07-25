@@ -6,7 +6,7 @@ const totalCards = 45;
 const cardsData = [];
 
 for (let i = 1; i <= totalCards; i++) {
-  cardsData.push({ imgSrc: `images/${i}.jpg` });
+  cardsData.push({ imgSrc: `${process.env.PUBLIC_URL}/images/${i}.jpg` });
 }
 
 const App = () => {

@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://tarot.aromaaround.com",
+  "homepage": "https://ianjustin39.github.io/gachagame/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
