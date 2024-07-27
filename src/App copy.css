@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .App {
@@ -23,12 +23,17 @@ body {
 }
 
 .selected-cards {
-  position: absolute;
-  top: 10px; /* 設定到視窗右上角 */
-  right: 10px;
   display: flex;
-  justify-content: space-around; /* 卡片分開 */
-  transition: all 1s ease-in-out; /* 動畫效果 */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.selected-card {
+  width: 200px; /* 設定為圖片的寬度 */
+  height: 300px; /* 設定為圖片的高度 */
+  margin: 10px;
+  perspective: 1000px;
+  cursor: pointer;
 }
 
 
@@ -62,8 +67,6 @@ body {
 }
 
 .card-back {
-  background-image: url('/public/images/Logo.PNG'); /* 卡片背面背景圖片 */
-  background-color: #888; /* Darker grey background for the back */
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;
@@ -71,6 +74,12 @@ body {
 }
 
 .card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持圖片比例並覆蓋整個卡片 */
+}
+
+.selected-card img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* 保持圖片比例並覆蓋整個卡片 */

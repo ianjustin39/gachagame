@@ -1,41 +1,56 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  margin-top: 50px;
+  padding-bottom: 150px;
+  background-color: #E9E9E9;
 }
 
 .App {
   text-align: center;
 }
 
+.blank-cards {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.blank-card {
+  width: 100px;
+  height: 150px;
+  border: 1px dashed #ccc;
+  margin: 0 10px;
+  transition: opacity 0.6s ease;
+}
+
+.blank-card.fade-in {
+  transition: opacity 1s ease;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-right: 8%;
 }
 
 .card {
-  width: 100px; /* 設定為圖片的寬度 */
-  height: 150px; /* 設定為圖片的高度 */
-  margin: 10px;
+  width: 100px;
+  height: 150px;
   perspective: 1000px;
   cursor: pointer;
+  margin-right: -80px;
+  transition: transform 0.3s ease, opacity 0.6s ease;
 }
 
-.selected-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.card.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
-.selected-card {
-  width: 200px; /* 設定為圖片的寬度 */
-  height: 300px; /* 設定為圖片的高度 */
-  margin: 10px;
-  perspective: 1000px;
-  cursor: pointer;
+.card:hover {
+  transform: scale(1.1);
 }
-
 
 .card-inner {
   position: relative;
@@ -57,18 +72,16 @@ body {
 }
 
 .card-front {
-  background-image: url('/public/images/Logo.PNG'); /* 卡片正面背景圖片 */
-  background-size: contain; /* 調整圖片大小 */
-  background-repeat: no-repeat; /* 不重複背景圖片 */
+  background-image: url('/public/images/Logo.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
-  background-color: white; /* 背景顏色 */
-  border: 2px solid black; /* 黑色邊框 */
+  background-color: white;
+  border: 1px solid black;
   border-radius: 10px;
 }
 
 .card-back {
-  background-image: url('/public/images/Logo.PNG'); /* 卡片背面背景圖片 */
-  background-color: #888; /* Darker grey background for the back */
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;
@@ -78,13 +91,27 @@ body {
 .card-back img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 保持圖片比例並覆蓋整個卡片 */
+  object-fit: cover;
 }
 
 .selected-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 保持圖片比例並覆蓋整個卡片 */
+  object-fit: cover;
+}
+
+.selected-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.selected-card {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  perspective: 1000px;
+  cursor: pointer;
 }
 
 button {
@@ -92,4 +119,17 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+}
+
+@media screen and (orientation:portrait) { 
+  .cards {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
 }
