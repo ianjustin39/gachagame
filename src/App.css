@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   padding-bottom: 150px;
-  background-color: #E9E9E9;
+  background-color: #e1f1fa;
 }
 
 .App {
@@ -16,8 +16,10 @@ body {
 }
 
 .blank-card {
-  width: 100px;
-  height: 150px;
+  /* width: 100px;
+  height: 150px; */
+  width: 191px;
+  height: 263px;
   border: 1px dashed #ccc;
   margin: 0 10px;
   opacity: 0;
@@ -41,8 +43,8 @@ body {
 }
 
 .blank-single-card {
-  width: 100px;
-  height: 150px;
+  width: 191px;
+  height: 263px;
   perspective: 1000px;
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.6s ease;
@@ -57,20 +59,50 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-right: 110px; /* 左右各添加8%的内边距，确保内容居中且不超出 */
+  padding-right: 230px;
   padding-left: 35px ;
   box-sizing: border-box; /* 确保padding包含在宽度内 */
 }
 
 
 .card {
-  width: 100px;
-  height: 150px;
+  /* width: 98px;
+  height: 140px; */
+  /* width: 123px;
+  height: 175px; */
+  width: 191px;
+  height: 263px;
   perspective: 1000px;
   cursor: pointer;
-  margin-right: -80px;
+  margin-right: -210px;
   margin-bottom: 10px;
   transition: transform 0.3s ease, opacity 0.6s ease;
+}
+
+@media screen and (orientation:portrait) { 
+  .cards {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding-right: 110px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+    width: 98px;
+    height: 140px;
+    margin-right: -80px;
+  }
+  .blank-card {
+    width: 100px;
+    height: 150px;
+  }
+  .blank-single-card {
+    width: 100px;
+    height: 150px;
+  }
+  
 }
 
 
@@ -104,12 +136,12 @@ body {
 }
 
 .card-front {
-  background-image: url('/public/images/Logo.PNG');
+  background-image: url('/public/images/back.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 10px;
 }
 
