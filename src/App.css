@@ -20,19 +20,48 @@ body {
   height: 150px;
   border: 1px dashed #ccc;
   margin: 0 10px;
-  transition: opacity 0.6s ease;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blank-card.show-number {
+  opacity: 1;
+}
+
+.blank-card .number {
+  font-size: 24px;
+  color: #ccc;
 }
 
 .blank-card.fade-in {
-  transition: opacity 1s ease;
+  opacity: 1;
 }
+
+.blank-single-card {
+  width: 100px;
+  height: 150px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.6s ease;
+}
+
+.blank-single-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
 
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-right: 8%;
+  padding-right: 110px; /* 左右各添加8%的内边距，确保内容居中且不超出 */
+  padding-left: 35px ;
+  box-sizing: border-box; /* 确保padding包含在宽度内 */
 }
+
 
 .card {
   width: 100px;
@@ -40,8 +69,11 @@ body {
   perspective: 1000px;
   cursor: pointer;
   margin-right: -80px;
+  margin-bottom: 10px;
   transition: transform 0.3s ease, opacity 0.6s ease;
 }
+
+
 
 .card.hidden {
   opacity: 0;
@@ -119,17 +151,4 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-}
-
-@media screen and (orientation:portrait) { 
-  .cards {
-    width: 100%;
-    justify-content: flex-start;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .card {
-    margin-bottom: 20px;
-  }
 }

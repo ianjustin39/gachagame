@@ -109,7 +109,7 @@ const App = () => {
                   className={`blank-card ${showBlankCards[index] ? 'fade-in' : ''}`}
                 >
                   {showBlankCards[index] && (
-                    <div className={`card ${selectedCards[index]?.flipped ? 'flipped' : ''}`}>
+                    <div className={`blank-single-card ${selectedCards[index]?.flipped ? 'flipped' : ''}`}>
                       <div className="card-inner">
                         <div className="card-front"></div>
                         <div className="card-back">
